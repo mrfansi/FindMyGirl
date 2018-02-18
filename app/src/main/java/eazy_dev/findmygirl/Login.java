@@ -24,7 +24,6 @@ public class Login extends AppCompatActivity {
             public void onClick(View view) {
                 Intent homeIntent = new Intent(Login.this, Home.class);
                 startActivity(homeIntent);
-
                 finish();
             }
         });
