@@ -4,8 +4,12 @@ import android.content.pm.ActivityInfo;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -17,6 +21,9 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
 
     // Button
     private FloatingActionButton fab_opsi, fab_profil;
+    private Animation FabOpen, FabClose, FabRClockWise, FabRAntiClockWise;
+    private Boolean isOpen = false;
+
     private double latitude, longitude;
 
     @Override
@@ -25,6 +32,17 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // Button
+        fab_opsi = findViewById(R.id.opsi_btn);
+        fab_profil = findViewById(R.id.profil_btn);
+
+        // Animation
+        FabOpen = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_open);
+        FabClose = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
+        FabRClockWise = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_clockwise);
+        FabRAntiClockWise = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate_anticlockwise);
+
 
         setRequestedOrientation(ActivityInfo
                 .SCREEN_ORIENTATION_PORTRAIT);
@@ -36,7 +54,22 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
 
+        fab_opsi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (isOpen) {
+                    fab_profil.startAnimation(FabClose);
+                    fab_profil.setClickable(false);
 
+                    isOpen = false;
+                } else {
+                    fab_profil.startAnimation(FabOpen);
+                    fab_profil.setClickable(true);
+
+                    isOpen = true;
+                }
+            }
+        });
     }
 
 
