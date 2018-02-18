@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "483165233568",
-    "firebase_url": "https://eazy-189110.firebaseio.com",
-    "project_id": "eazy-189110",
-    "storage_bucket": "eazy-189110.appspot.com"
+    "project_number": "494049285007",
+    "firebase_url": "https://find-my-girl-8150a.firebaseio.com",
+    "project_id": "find-my-girl-8150a",
+    "storage_bucket": "find-my-girl-8150a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:483165233568:android:33ddd03ab08669b4",
+        "mobilesdk_app_id": "1:494049285007:android:33ddd03ab08669b4",
         "android_client_info": {
           "package_name": "eazy_dev.findmygirl"
         }
       },
       "oauth_client": [
         {
-          "client_id": "483165233568-v4uj17csvrf3tm14l75o6j9e7r2ej4eb.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "483165233568-a68qhvrae86607cm6j1s6ln078ug9bm8.apps.googleusercontent.com",
+          "client_id": "494049285007-hej2o9na0r3d18turf0t8b3du5u7dctk.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "eazy_dev.findmygirl",
             "certificate_hash": "89a3426d01d7daef566807d129cc29a57f48d9c9"
           }
+        },
+        {
+          "client_id": "494049285007-gkucekfe7re4pc2ulbns42i8i6lfd6g9.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBL9yIc_53ygqwr6Mzxm2-hHeNgVUZv0wA"
+          "current_key": "AIzaSyCTWHyBWzTf9q90mXKRPxhE8J4CX8v7bes"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "483165233568-v4uj17csvrf3tm14l75o6j9e7r2ej4eb.apps.googleusercontent.com",
+              "client_id": "494049285007-gkucekfe7re4pc2ulbns42i8i6lfd6g9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
