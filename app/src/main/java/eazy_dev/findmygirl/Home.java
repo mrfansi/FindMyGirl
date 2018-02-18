@@ -62,7 +62,7 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LatLng myPosition = new LatLng(-latitude, longitude);
+        LatLng myPosition = new LatLng(latitude, longitude);
         mMap.addMarker(new MarkerOptions().position(myPosition).title("Marker My Position"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(myPosition));
     }
