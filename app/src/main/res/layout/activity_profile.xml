@@ -5,113 +5,147 @@
     android:layout_height="match_parent"
     tools:context="eazy_dev.findmygirl.Profile">
 
-    <TextView
-        android:id="@+id/profile_bar"
+    <RelativeLayout
+        android:id="@+id/layout_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/title_profile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:background="@color/colorAccent"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        android:padding="8dp"
-        android:textAllCaps="true"
-        android:textStyle="bold|italic"/>
+        android:paddingBottom="16dp">
 
-    <ImageView
-        android:contentDescription="@string/image_profile"
-        android:id="@+id/image_profile"
-        android:layout_below="@+id/profile_bar"
-        android:layout_width="130dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:background="@color/btn_greygoogle" />
+        <TextView
+            android:id="@+id/profile_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/title_profile"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/image_profile"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@+id/profile_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/iv_image_custom"
+            android:contentDescription="@string/image_profile"
+            android:padding="15dp"
+            android:src="@drawable/ic_person_black_24dp" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/image_profile"
+            android:layout_marginEnd="100dp"
+            android:background="@drawable/iv_image_custom"
+            android:src="@drawable/ic_edit_black_16dp"
+
+            />
+
+
+    </RelativeLayout>
+
 
     <TextView
         android:id="@+id/tv_namalengkap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_below="@+id/image_profile"
+        android:layout_below="@+id/layout_image"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="@string/tv_namalengkap"
+        android:text="Full Name"
         android:textColor="@color/colorAccent"
         android:textSize="14sp"
         android:textStyle="bold" />
 
     <EditText
-        android:inputType="text"
-        android:maxLength="50"
-        android:hint="@string/masukkan_nama_anda"
         android:id="@+id/tv_namalengkapdata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_namalengkap"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="16dp"
-        android:textSize="14sp"
-        />
+        android:hint="Your Full Name"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="50dp"
+        android:inputType="text"
+        android:maxLength="50"
+        android:textSize="14sp" />
 
     <ImageButton
-        android:contentDescription="@string/edit_nama"
+        android:id="@+id/edit_nama"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_below="@+id/tv_namalengkap"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/editpencil16"
+        android:layout_alignParentRight="true"
         android:layout_marginEnd="16dp"
-        />
+        android:layout_marginTop="8dp"
+        android:background="@color/btn_greygoogle"
+        android:contentDescription="@string/edit_nama"
+        android:src="@drawable/ic_edit_black_16dp" />
 
     <TextView
         android:id="@+id/tv_alamatemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_namalengkapdata"
-        android:text="@string/tv_alamatemail"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="10dp"
+        android:text="Email Address"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:textSize="14sp"/>
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
     <ImageButton
-        android:contentDescription="@string/edit_email"
+        android:id="@+id/edit_alamat"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/tv_alamatemail"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/editpencil16"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        />
+        android:contentDescription="@string/edit_email"
+        android:src="@drawable/ic_edit_black_16dp"
+        android:background="@color/btn_greygoogle"/>
 
     <EditText
-        android:inputType="textEmailAddress"
         android:id="@+id/tv_alamatemaildata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/tv_alamatemail"
-        android:hint="@string/alamat_email_anda"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:hint="Your Email Address"
+        android:inputType="textEmailAddress"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_gender"
-        android:layout_marginStart="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_below="@+id/tv_alamatemaildata"
-        android:text="@string/tv_gender"
-        android:textSize="14sp"
+        android:text="Sex"
         android:textColor="@color/colorAccent"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold" />
 
-   <Spinner
-       android:id="@+id/gender_spinner"
-       android:layout_below="@+id/tv_gender"
-       android:layout_margin="5dp"
-       android:padding="5dp"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:entries="@array/gender"></Spinner>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_gender"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="16dp"
+        android:entries="@array/gender"></Spinner>
+
+
 </RelativeLayout>
