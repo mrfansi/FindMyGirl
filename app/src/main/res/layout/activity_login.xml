@@ -33,6 +33,6 @@
         android:text="Sign In With Google"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="13sp" />
+        android:textSize="14sp" />
 
 </RelativeLayout>
