@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "494049285007",
+    "firebase_url": "https://find-my-girl-8150a.firebaseio.com",
+    "project_id": "find-my-girl-8150a",
+    "storage_bucket": "find-my-girl-8150a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:494049285007:android:33ddd03ab08669b4",
+        "android_client_info": {
+          "package_name": "eazy_dev.findmygirl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "494049285007-hej2o9na0r3d18turf0t8b3du5u7dctk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "eazy_dev.findmygirl",
+            "certificate_hash": "89a3426d01d7daef566807d129cc29a57f48d9c9"
+          }
+        },
+        {
+          "client_id": "494049285007-gkucekfe7re4pc2ulbns42i8i6lfd6g9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTWHyBWzTf9q90mXKRPxhE8J4CX8v7bes"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "494049285007-gkucekfe7re4pc2ulbns42i8i6lfd6g9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
