@@ -4,5 +4,18 @@
     <string name="facebook_app_id">169678373662968</string>
     <string name="fb_login_protocol_scheme">fb169678373662968</string>
     <string name="google_signintext">Sign In With Google</string>
-    <string name="title_activity_home">Home</string>
+    <string name="title_profile">My Profile</string>
+    <string name="tv_namalengkap">Nama Lengkap</string>
+    <string name="tv_alamatemail">Alamat Email</string>
+    <string name="tv_gender">Gender</string>
+    <string name="image_profile">image_profile</string>
+    <string name="masukkan_nama_anda">Masukkan Nama Anda</string>
+    <string name="edit_nama">edit_nama</string>
+    <string name="edit_email">edit_email</string>
+    <string name="alamat_email_anda">Alamat Email Anda</string>
+
+    <string-array name="gender">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
 </resources>
