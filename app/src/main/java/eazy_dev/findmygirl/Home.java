@@ -1,5 +1,14 @@
 package eazy_dev.findmygirl;
 
+import android.*;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -14,6 +23,12 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
+    GPSTracker gps;
+
+    private double latitude,longitude;
+
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +37,15 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        gps = new GPSTracker(Home.this);
+
+        if (gps.canGetLocation()) {
+            latitude = gps.getLatitude();
+            longitude = gps.getLongitude();
+        } else {
+            gps.showSettingsAlert();
+        }
     }
 
 
@@ -38,9 +62,8 @@ public class Home extends FragmentActivity implements OnMapReadyCallback {
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng myPosition = new LatLng(-latitude, longitude);
+        mMap.addMarker(new MarkerOptions().position(myPosition).title("Marker My Position"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(myPosition));
     }
 }
