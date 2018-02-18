@@ -9,6 +9,7 @@
     android:paddingBottom="20dp">
 
     <ImageView
+        android:contentDescription="@string/iv_logo"
         android:layout_alignParentTop="true"
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -24,13 +25,13 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:background="@color/btn_greygoogle"
-        android:drawableLeft="@drawable/logogoogle36"
+        android:drawableStart="@drawable/logogoogle36"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:paddingLeft="10dp"
         android:fontFamily="casual"
         android:paddingRight="10dp"
-        android:text="Sign In With Google"
+        android:text="@string/google_signintext"
         android:textStyle="bold"
         android:textColor="@color/black"
         android:textSize="13sp" />
