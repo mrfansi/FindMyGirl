@@ -1,6 +1,7 @@
 package eazy_dev.findmygirl;
 
 import android.content.pm.ActivityInfo;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.Window;
@@ -14,6 +15,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class Home extends FragmentActivity implements OnMapReadyCallback {
 
+    // Button
+    private FloatingActionButton fab_opsi, fab_profil;
     private double latitude, longitude;
 
     @Override
